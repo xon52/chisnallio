@@ -14,7 +14,7 @@
     "vue": "^2.6.11",
     "vuex": "^3.1.3",
     "x5-modal": "^0.2.18",
-    "x5-notify": "^0.3.3"
+    "x5-notify": "^0.3.5"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.3.1",
