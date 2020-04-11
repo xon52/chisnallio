@@ -131,11 +131,11 @@ export default {
 
 <style lang="scss" scoped>
 .form-wrapper {
-  margin: 30px auto;
+  margin: 0 20px;
 }
 .form {
   max-width: 500px;
-  margin: 0 20px;
+  margin: 30px auto;
 }
 .line-wrapper {
   position: relative;
