@@ -1,6 +1,6 @@
 <template>
   <base-section title="Projects" name="projects">
-    <div v-for="project in projects" :key="project.title">
+    <div v-for="project in projects" class="project-wrapper" :key="project.title">
       <h3 class="project-heading">
         {{ project.title }} <span class="project-desc">({{ project.desc }})</span>
       </h3>
@@ -46,6 +46,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.project-wrapper {
+  margin: 0 20px;
+}
 .project-heading {
   text-align: center;
   margin: 40px 0 10px 0;

@@ -1,56 +1,61 @@
 <template>
   <base-section title="Contact Me" name="contact">
-    <form v-show="showForm" class="form" ref="contactForm">
-      <div class="line-wrapper">
-        <input
-          v-model="name"
-          type="text"
-          :class="`line-input ${name ? 'line-input--filled' : ''} ${errorName ? 'error' : ''}`"
-          id="name"
-          name="name"
-        />
-        <label class="line-label" for="name">Name</label>
-        <div class="line-error">{{ errorName }}</div>
-      </div>
-
-      <div class="line-wrapper">
-        <input
-          v-model="email"
-          type="email"
-          :class="`line-input ${email ? 'line-input--filled' : ''} ${errorEmail ? 'error' : ''}`"
-          id="email"
-          name="email"
-        />
-        <label class="line-label" for="email">Email</label>
-        <div class="line-error">{{ errorEmail }}</div>
-      </div>
-
-      <div class="line-wrapper">
-        <textarea
-          v-model="message"
-          rows="5"
-          :class="`line-input ${message ? 'line-input--filled' : ''} ${errorMessage ? 'error' : ''}`"
-          id="message"
-          name="message"
-        ></textarea>
-        <label class="line-label" for="message">Message</label>
-        <div class="line-error">{{ errorMessage }}</div>
-      </div>
-
-      <div class="line-wrapper">
-        <div class="line-input-submit">
-          <button type="submit" name="submit" class="submit" :disabled="!canSend || formSending" @click="submit">
-            Submit
-          </button>
+    <div class="form-wrapper">
+      <form v-show="showForm" class="form" ref="contactForm">
+        <div class="line-wrapper">
+          <input
+            v-model="name"
+            :disabled="formSending"
+            type="text"
+            :class="`line-input ${name ? 'line-input--filled' : ''} ${errorName ? 'error' : ''}`"
+            id="name"
+            name="name"
+          />
+          <label class="line-label" for="name">Name</label>
+          <div class="line-error">{{ errorName }}</div>
         </div>
-      </div>
-    </form>
-    <div v-show="formFail" class="form-error">
-      <p>Hmmm, something went wrong...</p>
-      <p>Would you mind sending me an email instead?</p>
-      <div>
-        <a class="form-error-email" href="mailto:contact@chisnall.io">contact@chisnall.io</a>
-        <img class="form-error-do-it" src="../assets/img/do it.png" alt="NVM" />
+
+        <div class="line-wrapper">
+          <input
+            v-model="email"
+            :disabled="formSending"
+            type="email"
+            :class="`line-input ${email ? 'line-input--filled' : ''} ${errorEmail ? 'error' : ''}`"
+            id="email"
+            name="email"
+          />
+          <label class="line-label" for="email">Email</label>
+          <div class="line-error">{{ errorEmail }}</div>
+        </div>
+
+        <div class="line-wrapper">
+          <textarea
+            v-model="message"
+            :disabled="formSending"
+            rows="5"
+            :class="`line-input ${message ? 'line-input--filled' : ''} ${errorMessage ? 'error' : ''}`"
+            id="message"
+            name="message"
+          ></textarea>
+          <label class="line-label" for="message">Message</label>
+          <div class="line-error">{{ errorMessage }}</div>
+        </div>
+
+        <div class="line-wrapper">
+          <div class="line-input-submit">
+            <button type="submit" name="submit" class="submit" :disabled="!canSend || formSending" @click="submit">
+              Submit
+            </button>
+          </div>
+        </div>
+      </form>
+      <div v-show="formFail" class="form-error">
+        <p>Hmmm, something went wrong...</p>
+        <p>Would you mind sending me an email instead?</p>
+        <div>
+          <a class="form-error-email" href="mailto:contact@chisnall.io">contact@chisnall.io</a>
+          <img class="form-error-do-it" src="../assets/img/do it.png" alt="NVM" />
+        </div>
       </div>
     </div>
   </base-section>
@@ -125,9 +130,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.form-wrapper {
+  margin: 30px auto;
+}
 .form {
   max-width: 500px;
-  margin: 30px auto;
+  margin: 0 20px;
 }
 .line-wrapper {
   position: relative;
@@ -139,7 +147,7 @@ export default {
   }
 }
 .line-input {
-  width: 90%;
+  width: 100%;
   padding: 20px;
   border-radius: 10px;
   outline-style: none;
@@ -202,6 +210,8 @@ export default {
 .form-error {
   position: relative;
   overflow: hidden;
+  width: 90%;
+  margin: 0 auto;
   background: rgb(255, 227, 174);
   border: orange outset 4px;
   color: orangered;
