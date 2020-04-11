@@ -5,7 +5,7 @@ if (process.env.NODE_ENV === 'production') plugins.push(new BundleAnalyzerPlugin
 
 module.exports = {
   publicPath: process.env.NODE_ENV === 'production'
-    ? '/chisnallio/'
+    ? './chisnallio/'
     : '/',
   outputDir: __dirname + '/docs',
   transpileDependencies: [],
