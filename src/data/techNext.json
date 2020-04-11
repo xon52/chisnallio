@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Node",
+    "icon": "devicon-nodejs-plain colored",
+    "link": "https://nodejs.org"
+  },
+  {
+    "name": "Jest",
+    "img": "https://firebasestorage.googleapis.com/v0/b/chisnall-io.appspot.com/o/jest.svg?alt=media&token=3a536f07-9b4f-46d3-8dbd-7c7b2f99f1f5",
+    "link": "https://jestjs.io/"
+  },
+  {
+    "name": "MongoDB",
+    "icon": "devicon-mongodb-plain colored",
+    "link": "https://www.mongodb.com/"
+  },
+  {
+    "name": "TypeScript",
+    "icon": "devicon-typescript-plain colored",
+    "link": "https://www.typescriptlang.org/"
+  },
+  {
+    "name": "PostgreSQL",
+    "icon": "devicon-postgresql-plain colored",
+    "link": "https://www.postgresql.org/"
+  },
+  {
+    "name": "AWS",
+    "icon": "devicon-amazonwebservices-original colored",
+    "link": "https://aws.amazon.com/"
+  }
+]

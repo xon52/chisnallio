@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Medicly",
+    "status": "Active",
+    "icon": "fas fa-pills",
+    "color": "#4caf50",
+    "desc": "A platform for prescribing doctors to view medication stocks and prices of nearby pharmacies to better support patients.",
+    "link": "https://medicly.com.au/",
+    "tech": "Vue, AWS, Django, PWA"
+  },
+  {
+    "name": "YouFindMe",
+    "status": "Shelved",
+    "icon": "fas fa-search",
+    "color": "#2196f3",
+    "desc": "An employment platform for businesses to search profiles and organise same-day interviews; removing resumes and coverletters, and rapidly filling positions.",
+    "tech": "Vue, Firebase, PWA"
+  },
+  {
+    "name": "Tailings Dam Simulator",
+    "status": "Abandoned",
+    "icon": "fas fa-cloud-showers-heavy",
+    "color": "#9c27b0",
+    "desc": "An Excel/VBA spreadsheet to manage a refinery’s hazardous waste processes that evolved into a commercial Chemical Engineering software package.",
+    "tech": "C#, VBA, PHP, MySQL"
+  }
+]

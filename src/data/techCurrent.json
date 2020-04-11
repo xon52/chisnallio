@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Vue",
+    "icon": "devicon-vuejs-plain colored",
+    "link": "https://vuejs.org/"
+  },
+  {
+    "name": "Javascript",
+    "icon": "devicon-javascript-plain colored",
+    "link": "https://www.w3schools.com/js/default.asp"
+  },
+  {
+    "name": "HTML",
+    "icon": "devicon-html5-plain colored",
+    "link": "https://www.w3schools.com/html/default.asp"
+  },
+  {
+    "name": "CSS",
+    "icon": "devicon-css3-plain colored",
+    "link": "https://www.w3schools.com/css/default.asp"
+  },
+  {
+    "name": "SASS",
+    "icon": "devicon-sass-original colored",
+    "link": "https://www.w3schools.com/css/default.asp"
+  },
+  {
+    "name": "PWA",
+    "img": "https://firebasestorage.googleapis.com/v0/b/chisnall-io.appspot.com/o/pwa.svg?alt=media&token=dcf94a36-fe62-442c-98b2-956192d74af1",
+    "link": "https://developers.google.com/web/progressive-web-apps/"
+  },
+  {
+    "name": "webpack",
+    "icon": "devicon-webpack-plain colored",
+    "link": "https://webpack.js.org/"
+  },
+  {
+    "name": "Firebase",
+    "img": "https://firebasestorage.googleapis.com/v0/b/chisnall-io.appspot.com/o/firebase.svg?alt=media&token=74286fa5-06e9-4e65-9acb-ba0810ec141c",
+    "link": "https://firebase.google.com/"
+  },
+  {
+    "name": "VS Code",
+    "img": "https://firebasestorage.googleapis.com/v0/b/chisnall-io.appspot.com/o/vscode.svg?alt=media&token=cc30eb3d-235c-4be2-9ebe-458b8bb83c58",
+    "link": "https://visualstudio.microsoft.com/"
+  },
+  {
+    "name": "GitHub",
+    "icon": "devicon-github-plain colored",
+    "link": "https://github.com/"
+  },
+  {
+    "name": "Gimp",
+    "icon": "devicon-gimp-plain colored",
+    "link": "https://www.gimp.org/"
+  },
+  {
+    "name": "Inkscape",
+    "icon": "devicon-inkscape-plain colored",
+    "link": "https://inkscape.org/"
+  }
+]

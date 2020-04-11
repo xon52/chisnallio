@@ -1,0 +1,27 @@
+[
+  {
+    "name": "PHP",
+    "icon": "devicon-php-plain colored",
+    "link": "https://www.php.net/"
+  },
+  {
+    "name": "C#",
+    "icon": "devicon-csharp-plain colored",
+    "link": "https://docs.microsoft.com/en-us/dotnet/csharp/"
+  },
+  {
+    "name": "MySQL",
+    "icon": "devicon-mysql-plain colored",
+    "link": "https://www.mysql.com/"
+  },
+  {
+    "name": "V.Studio",
+    "icon": "devicon-visualstudio-plain colored",
+    "link": "https://visualstudio.microsoft.com/"
+  },
+  {
+    "name": "VBA",
+    "img": "https://firebasestorage.googleapis.com/v0/b/chisnall-io.appspot.com/o/vba.svg?alt=media&token=fa51cd59-d6bd-4a0c-9ba0-655af2a4fcf1",
+    "link": "https://docs.microsoft.com/en-us/office/vba/library-reference/concepts/getting-started-with-vba-in-office"
+  }
+]
