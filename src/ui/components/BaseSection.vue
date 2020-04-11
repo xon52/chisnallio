@@ -31,10 +31,13 @@ export default {
 <style lang="scss" scoped>
 .section {
   margin: 0 auto;
-  max-width: 100vw;
+  max-width: 800px;
   padding: 40px 0;
-  width: 800px;
+  width: 90vw;
   cursor: pointer;
+  &:first-of-type {
+    padding-top: 20px;
+  }
   .title {
     text-align: center;
     font-size: 34px;

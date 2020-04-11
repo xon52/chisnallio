@@ -1,11 +1,9 @@
 <template>
   <div>
-    <div class="container">
-      <base-toolbar></base-toolbar>
-      <base-sections></base-sections>
-      <base-footer></base-footer>
-      <base-to-top-button></base-to-top-button>
-    </div>
+    <base-toolbar></base-toolbar>
+    <base-sections></base-sections>
+    <base-footer></base-footer>
+    <base-to-top-button></base-to-top-button>
     <x5-modals></x5-modals>
     <x5-notify></x5-notify>
   </div>
@@ -30,8 +28,4 @@ export default {
 
 <style lang="scss" scoped>
 @import url('./assets/style.scss');
-.container {
-  margin: 20px 0;
-  overflow: hidden;
-}
 </style>

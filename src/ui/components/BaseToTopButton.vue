@@ -38,7 +38,7 @@ a {
   height: $button-size;
   position: fixed;
   bottom: 100px;
-  right: -$button-size;
+  right: -$button-size - 10px;
   width: $button-size;
   transition: right 0.3s ease-in-out;
   &:hover {
