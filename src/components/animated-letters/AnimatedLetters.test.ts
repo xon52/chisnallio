@@ -1,5 +1,5 @@
 import { afterAll, beforeAll, beforeEach, describe, expect, test, vi } from 'vitest'
-import Component from './AnimatedLetters.vue'
+import AnimatedLettersVue from './AnimatedLetters.vue'
 import { render, fireEvent } from '@testing-library/vue'
 
 const characterClass = 'text-char'
@@ -8,10 +8,10 @@ const hoverClass = 'hover'
 const text = 'test text'
 const delay = 1234
 
-describe(`function checks initial state`, () => {
+describe(`text is shown and animates correctly`, () => {
   let container: Element
   beforeEach(() => {
-    container = render(Component, { props: { text, delay } }).container
+    container = render(AnimatedLettersVue, { props: { text, delay } }).container
   })
   beforeAll(() => {
     vi.useFakeTimers()

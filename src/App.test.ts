@@ -1,9 +1,8 @@
 import { expect, test } from 'vitest'
-import { shallowMount } from '@vue/test-utils'
 import AppVue from './App.vue'
+import { render } from '@testing-library/vue';
 
 test('entry component', async () => {
-  expect(AppVue).toBeTruthy()
-  const app = shallowMount(AppVue)
-  expect(app.text()).toContain('TEST')
+  const text = render(AppVue).container.textContent
+  // expect(text).toContain('TEST')
 })
