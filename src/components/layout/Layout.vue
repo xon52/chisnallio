@@ -1,17 +1,17 @@
 <template>
-  <div class="vertical-wrapper">
-    <div class="header-wrapper">
+  <div class="layout-wrapper">
+    <div class="layout-header">
       <slot name="header"></slot>
     </div>
-    <div class="horizontal-wrapper">
-      <div class="sidebar-wrapper">
+    <div class="layout-main">
+      <div class="layout-sidebar">
         <slot name="sidebar"></slot>
       </div>
-      <div class="main-wrapper">
+      <div class="layout-content">
         <slot>No content</slot>
       </div>
     </div>
-    <div class="footer-wrapper">
+    <div class="layout-footer">
       <slot name="footer"></slot>
     </div>
   </div>
@@ -20,29 +20,32 @@
 <script setup lang="ts"></script>
 
 <style lang="scss" scoped>
-.vertical-wrapper {
+.layout-wrapper {
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
 }
-.header-wrapper {
+.layout-header {
   justify-self: flex-start;
   flex-shrink: 1;
 }
-.footer-wrapper {
+.layout-footer {
   justify-self: flex-end;
   flex-shrink: 1;
 }
-.horizontal-wrapper {
+.layout-main {
   display: flex;
   flex-grow: 1;
 }
-.sidebar-wrapper {
+.layout-sidebar {
   align-self: flex-start;
   flex-shrink: 1;
+  height: 100%;
+  min-width: 100px;
+  border-right: 1px gold solid;
 }
-.main-wrapper {
+.layout-content {
   flex-grow: 1;
 }
 </style>
