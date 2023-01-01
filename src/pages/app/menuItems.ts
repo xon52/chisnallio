@@ -1,4 +1,4 @@
-import { LinkType } from '../../types'
+import type { LinkType } from '../../types'
 
 export const pages: LinkType[] = [
   {

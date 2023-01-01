@@ -16,8 +16,6 @@
 
 <script setup lang="ts">
 import SidebarVue from '../../components/sidebar/Sidebar.vue'
-import NavButtonVue from '../../components/nav-button/NavButton.vue'
+import NavButtonVue from '../../components/nav/nav-button/NavButton.vue'
 import { pages, links } from './menuItems'
 </script>
-
-<style lang="scss" scoped></style>

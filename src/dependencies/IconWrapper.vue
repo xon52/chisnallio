@@ -7,6 +7,6 @@ import './icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 const { icon } = defineProps({
-  icon: { type: String, required: true },
+  icon: { type: String, required: true }
 })
 </script>

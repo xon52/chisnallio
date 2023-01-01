@@ -3,7 +3,8 @@
   "extends": [
     "plugin:vue/vue3-essential",
     "eslint:recommended",
-    "@vue/typescript"
+    "@vue/eslint-config-typescript/recommended",
+    "@vue/eslint-config-prettier"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -12,7 +13,9 @@
     ]
   },
   "plugins": [
-    "@typescript-eslint"
+    "@typescript-eslint",
+    "testing-library",
+    "vue/vue3-recommended"
   ],
   "rules": {
     "@typescript-eslint/strict-boolean-expressions": [

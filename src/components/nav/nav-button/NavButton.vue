@@ -1,31 +1,35 @@
 <template>
   <div
-    :class="['nav-button-wrapper', { 'nav-button-loading': isLoading, large: large }]"
+    :class="['wrapper', { loading: isLoading, large, small }]"
     @mouseenter="onHoverChange(true)"
     @mouseleave="onHoverChange(false)"
     @click="onClick"
+    data-testid="nav-button-wrapper"
   >
     <transition-vue
       mode="out-in"
-      enter-active-class="animate__animated animate__flipInY animate__faster"
-      leave-active-class="animate__animated animate__flipOutY animate__faster"
+      enter-active-class="animate__animated animate__flipInY animate-fast"
+      leave-active-class="animate__animated animate__flipOutY animate-fast"
     >
-      <div v-if="isHover" class="nav-button-label">{{ link.label }}</div>
-      <fa-icon-wrapper-vue v-else class="nav-button-icon" :icon="link.icon" />
+      <div v-if="isHover" class="label" data-testid="nav-button-label">
+        {{ link.label }} <icon-wrapper-vue v-if="link.url" icon="fas arrow-up-right-from-square" />
+      </div>
+      <icon-wrapper-vue v-else class="icon" :icon="link.icon" data-testid="nav-button-icon" />
     </transition-vue>
   </div>
 </template>
 
 <script setup lang="ts">
-import { onMounted, PropType, ref, Transition as TransitionVue } from 'vue'
-import FaIconWrapperVue from '../../dependencies/FaIconWrapper.vue'
-import router from '../../router'
-import { LinkType } from '../../types'
+import { onMounted, type PropType, ref, Transition as TransitionVue } from 'vue'
+import IconWrapperVue from '@/dependencies/IconWrapper.vue'
+import router from '@/router'
+import type { LinkType } from '@/types'
 
-const { link, loadingTime } = defineProps({
+const { link, loadingTime, large, small } = defineProps({
   link: { type: Object as PropType<LinkType>, required: true },
   loadingTime: { type: Number, default: 400 },
   large: { type: Boolean, default: false },
+  small: { type: Boolean, default: false },
 })
 
 const isLoading = ref(true)
@@ -40,8 +44,8 @@ onMounted(() => setTimeout(() => (isLoading.value = false), loadingTime))
 </script>
 
 <style lang="scss" scoped>
-.nav-button-wrapper {
-  height: 20px;
+.wrapper {
+  height: 30px;
   padding: 10px;
   display: flex;
   justify-content: center;
@@ -49,22 +53,32 @@ onMounted(() => setTimeout(() => (isLoading.value = false), loadingTime))
   cursor: pointer;
   transition: color cubic-bezier(0.7, 0.8, 0.9, 0.95) 0.2s;
   /* TODO: update sizes with design system vars */
-  font-size: large;
+  font-size: x-large;
   &:hover {
     color: #ffd700;
   }
+  &.small {
+    height: 20px;
+    .icon {
+      /* TODO: update sizes with design system vars */
+      font-size: medium;
+    }
+  }
   &.large {
     height: 40px;
-    .nav-button-icon {
+    .icon {
       /* TODO: update sizes with design system vars */
       font-size: xx-large;
     }
   }
 }
-.nav-button-loading {
+.loading {
   opacity: 0;
   animation-name: bounceIn;
   animation-duration: 1s;
   animation-fill-mode: forwards;
+}
+.animate-fast {
+  animation-duration: 0.25s;
 }
 </style>

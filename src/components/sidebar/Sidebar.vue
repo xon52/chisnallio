@@ -19,9 +19,10 @@
 <style lang="scss" scoped>
 .sidebar-wrapper {
   height: 100%;
-  width: 100%;
+  width: 120px;
   display: flex;
   flex-direction: column;
+  border-right: gold 1px solid;
 }
 .sidebar-header {
   justify-self: flex-start;

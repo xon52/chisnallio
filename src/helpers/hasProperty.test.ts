@@ -3,7 +3,7 @@ import { hasProperty } from '.'
 
 const mockObject = { name: 'John Smith', age: 53 }
 
-describe('check hasProperty helper', () => {
+describe('Helpers: hasProperty()', () => {
   test('should return whether an object has a given property or not', () => {
     expect(hasProperty(mockObject, 'name')).toBeTruthy()
     expect(hasProperty(mockObject, 'age')).toBeTruthy()

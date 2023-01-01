@@ -13,6 +13,10 @@ export default defineConfig({
       brotliSize: true,
     }),
   ],
+  test: {
+    globals: true,
+    environment: 'jsdom',
+  },
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src'),

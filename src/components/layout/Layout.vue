@@ -42,8 +42,6 @@
   align-self: flex-start;
   flex-shrink: 1;
   height: 100%;
-  min-width: 100px;
-  border-right: 1px gold solid;
 }
 .layout-content {
   flex-grow: 1;

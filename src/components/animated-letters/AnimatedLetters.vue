@@ -3,9 +3,10 @@
     <span
       v-for="(char, i) in text"
       :key="char + i"
-      :class="['text-char', `_${i}`, { 'text-loading': loadingAnimation }, { hover: characterHoverStates[i] }]"
+      :class="['text-char', `_${i}`, { 'loading': loadingAnimation }, { hover: characterHoverStates[i] }]"
       @mouseenter="onCharacterHover(i)"
       @animationend="onCharacterAnimationEnd(i)"
+      data-testid="animated-letters-character"
     >
       {{ char }}
     </span>
@@ -42,7 +43,7 @@ onMounted(() => setTimeout(() => (loadingAnimation.value = false), delay))
     animation-duration: 1s;
   }
 }
-.text-loading {
+.loading {
   opacity: 0;
   animation-name: bounceIn;
   animation-duration: 1s;
@@ -50,7 +51,7 @@ onMounted(() => setTimeout(() => (loadingAnimation.value = false), delay))
 }
 
 @for $i from 0 through 35 {
-  .text-loading._#{$i} {
+  .loading._#{$i} {
     animation-delay: calc(1s * $i / 10);
   }
 }
