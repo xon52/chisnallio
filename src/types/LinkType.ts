@@ -1,1 +1,3 @@
-export type LinkType = { label: string; icon: string; path?: string, url?: string }
+import type { IconType } from './IconType'
+
+export type LinkType = { label: string; icon: IconType; path?: string; url?: string }

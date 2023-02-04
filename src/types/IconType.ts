@@ -1,0 +1,12 @@
+export type IconType =
+  | 'bars'
+  | 'circleUser'
+  | 'cubes'
+  | 'envelope'
+  | 'house'
+  | 'newTab'
+  | 'trophy'
+  | 'vuejs'
+  | 'xMark'
+  | 'github'
+  | 'linkedin'

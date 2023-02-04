@@ -12,16 +12,16 @@
       leave-active-class="animate__animated animate__flipOutY animate-fast"
     >
       <div v-if="isHover" class="label" data-testid="nav-button-label">
-        {{ link.label }} <icon-wrapper-vue v-if="link.url" icon="fas arrow-up-right-from-square" />
+        {{ link.label }} <icon-vue v-if="link.url" icon="newTab" />
       </div>
-      <icon-wrapper-vue v-else class="icon" :icon="link.icon" data-testid="nav-button-icon" />
+      <icon-vue v-else class="icon" :icon="link.icon" size="5em" data-testid="nav-button-icon" />
     </transition-vue>
   </div>
 </template>
 
 <script setup lang="ts">
 import { onMounted, type PropType, ref, Transition as TransitionVue } from 'vue'
-import IconWrapperVue from '@/dependencies/IconWrapper.vue'
+import IconVue from '@/assets/icons/Icon.vue'
 import router from '@/router'
 import type { LinkType } from '@/types'
 

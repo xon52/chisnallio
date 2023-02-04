@@ -1,13 +1,13 @@
 <template>
   <div class="menu-button-wrapper" @click="onClick" data-testid="nav-menu-button">
-    <icon-wrapper-vue class="menu-button-icon" :icon="link.icon" />
+    <icon-vue class="menu-button-icon" :icon="link.icon" />
     <span class="menu-button-label">{{ link.label }}</span>
   </div>
 </template>
 
 <script setup lang="ts">
 import type { PropType } from 'vue'
-import IconWrapperVue from '@/dependencies/IconWrapper.vue'
+import IconVue from '@/assets/icons/Icon.vue'
 import router from '@/router'
 import type { LinkType } from '@/types'
 

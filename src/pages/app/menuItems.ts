@@ -3,27 +3,27 @@ import type { LinkType } from '../../types'
 export const pages: LinkType[] = [
   {
     label: 'Home',
-    icon: 'fas house',
+    icon: 'house',
     path: '/',
   },
   {
     label: 'About',
-    icon: 'fas circle-user',
+    icon: 'circleUser',
     path: '/about',
   },
   {
     label: 'Skills',
-    icon: 'fas cubes',
+    icon: 'cubes',
     path: '/skills',
   },
   {
     label: 'My Work',
-    icon: 'fas trophy',
+    icon: 'trophy',
     path: '/my-work',
   },
   {
     label: 'Contact',
-    icon: 'fas envelope',
+    icon: 'envelope',
     path: '/contact',
   },
 ]
@@ -31,12 +31,12 @@ export const pages: LinkType[] = [
 export const links: LinkType[] = [
   {
     label: 'LinkedIn',
-    icon: 'fab linkedin',
+    icon: 'linkedin',
     url: 'https://www.linkedin.com/in/keagan-chisnall/',
   },
   {
     label: 'Github',
-    icon: 'fab github',
+    icon: 'github',
     url: 'https://github.com/xon52',
   },
 ]
