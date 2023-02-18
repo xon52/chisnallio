@@ -5,26 +5,26 @@
 </template>
 
 <script setup lang="ts">
-import * as icons from './'
+import icons from '.'
 import { computed } from 'vue'
-import { hasProperty } from '@/helpers'
-import type { IconType } from '@/types/IconType'
+import { hasProp } from '@/helpers'
 
-interface Props {
-  icon: IconType
-  size?: string
-  fill?: string
-  stroke?: string
-  strokeWidth?: number
-}
-
-const props = withDefaults(defineProps<Props>(), {
-  size: '1em',
-  fill: 'currentColor',
-})
+const props = withDefaults(
+  defineProps<{
+    icon: string
+    size?: string
+    fill?: string
+    stroke?: string
+    strokeWidth?: number
+  }>(),
+  {
+    size: '1em',
+    fill: 'currentColor',
+  }
+)
 
 const icon = computed(() => {
-  if (!hasProperty(icons, props.icon)) throw new Error(`Icon "${props.icon}" not found.`)
+  if (!hasProp(icons, props.icon)) throw new Error(`Icon ${props.icon} not found`)
   return icons[props.icon]
 })
 </script>

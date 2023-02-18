@@ -1,3 +1,8 @@
-import type { IconType } from './IconType'
-
-export type LinkType = { label: string; icon: IconType; path?: string; url?: string }
+export type LinkType = {
+  label: string
+  path?: string
+  url?: string
+  anchor?: string
+  icon?: string
+  newTab?: boolean
+}

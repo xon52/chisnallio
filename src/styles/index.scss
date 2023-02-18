@@ -1,7 +1,11 @@
-@import 'variables';
-@import 'normalize.scss';
-@import 'defaults.scss';
-@import 'spacing.scss';
-@import 'transitions.scss';
-@import 'typography.scss';
-@import 'utility.scss';
+// @import 'variables';
+// @import 'normalize.scss';
+// @import 'defaults.scss';
+// @import 'spacing.scss';
+// @import 'transitions.scss';
+// @import 'utility.scss';
+
+@use 'reset';
+@use 'defaults';
+@use 'layout';
+@use 'typography';

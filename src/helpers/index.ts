@@ -1,4 +1,5 @@
-export { default as hasProperty } from './hasProperty'
+export * as deviceProps from './deviceProps'
+export { default as hasProp } from './hasProp'
+export { default as log } from './log'
+export { default as scrollTo } from './scrollTo'
 export { default as wait } from './wait'
-export { isMobile, isTouch, windowWidth } from './deviceProps'
-export { isTextRendered, getAllByAttribute } from './testHelpers'

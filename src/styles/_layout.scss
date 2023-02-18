@@ -1,0 +1,17 @@
+@import 'colors';
+
+/*** Layout Variables ***/
+$nav-height-top: 100px;
+$nav-height-scroll: 70px;
+
+/*** Header Styles ***/
+header {
+  width: 100vw;
+  height: 100vh;
+  background: $header-bg;
+  display: flex;
+}
+
+main {
+  scroll-snap-type: y mandatory;
+}
