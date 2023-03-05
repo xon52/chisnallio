@@ -1,4 +1,4 @@
-import { LinkType } from './LinkType'
+import { PageLinkType } from './PageLinkType'
 import { SvgType } from './SvgType'
 
-export type { LinkType, SvgType }
+export type { PageLinkType, SvgType }

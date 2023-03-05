@@ -1,0 +1,70 @@
+
+@use '@/styles/3-helpers' as *;
+
+@font-face {
+  font-family: 'LaBelleAurore';
+  src: url('../assets/fonts/LaBelleAurore.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Rubik';
+  src: url('../assets/fonts/Rubik-VariableFont_wght.ttf') format('ttf');
+}
+
+body {
+  font-size: 120%;
+}
+
+@include lg-and-down {
+  body {
+    font-size: 100%;
+  }
+}
+
+@include md-and-down {
+  body {
+    font-size: 80%;
+  }
+}
+
+@include sm-and-down {
+  body {
+    font-size: 60%;
+  }
+}
+
+@include xs-and-down {
+  body {
+    font-size: 50%;
+  }
+}
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 3em;
+}
+h2 {
+  font-size: 2.5em;
+}
+h3 {
+  font-size: 2em;
+}
+h4 {
+  font-size: 1.5em;
+}
+h5 {
+  font-size: 1.25em;
+}
+h6 {
+  font-size: 1em;
+}

@@ -1,5 +1,5 @@
 <template>
-  <li tabindex="0" @click="link.anchor ? scrollTo(link.anchor, offset) : null">
+  <li tabindex="0" @click="link.anchor ? scrollToAnchor(link.anchor, offset) : null">
     <IconVue v-if="link.icon !== undefined" :icon="link.icon" />
     <span>{{ link.label }}</span>
   </li>
@@ -7,25 +7,27 @@
 
 <script setup lang="ts">
 import IconVue from '@/assets/icons/Icon.vue'
-import { scrollTo } from '@/helpers'
-import { LinkType } from '@/types'
+import { scrollToAnchor } from '@/helpers'
+import { PageLinkType } from '@/types'
 
-const { link } = defineProps<{ link: LinkType }>()
+const { link } = defineProps<{ link: PageLinkType }>()
 // console.log(variables)
 const offset = 70
 </script>
 
 <style lang="scss" scoped>
+@use '@/styles/3-helpers' as *;
+
 li {
   display: flex;
   align-items: center;
-  margin: 0 0 0.5rem 0;
+  margin: 0;
   padding: 0;
   list-style: none;
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: 300;
   line-height: 1.5;
-  color: #fff;
+  color: $light-text;
   cursor: pointer;
   border-radius: 50% 0 0 50%;
   transition: all 0.2s ease-in-out;
@@ -33,12 +35,12 @@ li {
   border-radius: 0.5rem;
 
   &:hover {
-    background-color: rgba($color: #fff, $alpha: 0.2);
+    background-color: rgba($color: $light-text, $alpha: 0.2);
   }
 
   &:active {
     outline: none;
-    background-color: rgba($color: #fff, $alpha: 0.5);
+    background-color: rgba($color: $light-text, $alpha: 0.5);
   }
 
   svg {

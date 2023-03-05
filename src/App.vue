@@ -8,37 +8,34 @@
     </a>
   </div> -->
 
-  <header id="home">
-    <NavigationVue :links="links" />
-    <HeroSectionVue />
+  <header id="Intro">
+    <NavigationVue />
+    <IntroVue />
   </header>
   <main>
     <SectionVue id="Portfolio"><PortfolioVue /></SectionVue>
+    <SectionVue id="History"><HistoryVue /></SectionVue>
     <SectionVue id="Contact"><ContactVue /></SectionVue>
   </main>
-  <footer>
+  <!-- <footer>
     <FooterSectionVue msg="Vite + Vue" />
-  </footer>
+  </footer> -->
 </template>
 
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import HeroSectionVue from './components/layout/HeroSection.vue'
+import HelloWorld from './pages/HelloWorld.vue'
+import IntroVue from './pages/Intro.vue'
 import NavigationVue from './components/layout/Navigation.vue'
 import SectionVue from './components/layout/Section.vue'
-import FooterSectionVue from './components/Footer.vue'
+import FooterSectionVue from './pages/Footer.vue'
 import { useAppStore } from './stores/app'
 import { onMounted } from 'vue'
-import ContactVue from './components/Contact.vue'
-import PortfolioVue from './components/Portfolio.vue'
-import { LinkType } from './types'
+import ContactVue from './pages/Contact.vue'
+import HistoryVue from './pages/History.vue'
+import PortfolioVue from './pages/Portfolio.vue'
+import links from './pages/PageLinks'
 
 const appStore = useAppStore()
-
-const links: LinkType[] = [
-  { label: 'Portfolio', anchor: '#Portfolio', icon: 'cubes' },
-  { label: 'Contact', anchor: '#Contact', icon: 'envelope' },
-]
 
 onMounted(() => {
   appStore.initialise()

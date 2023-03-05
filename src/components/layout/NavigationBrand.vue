@@ -1,26 +1,42 @@
 <template>
-  <div id="brand">
-    <div id="logo" @click="scrollTo('#home', 160)"></div>
-    <!-- <div id="word-mark" :class="{ 'near-top': appStore.nearTop }"></div> -->
+  <div id="brand" @click="scrollToAnchor('Intro', 160)">
+    <div id="logo"></div>
     <span id="name" :class="{ 'near-top': appStore.nearTop }">Keagan Chisnall</span>
   </div>
 </template>
 
 <script setup lang="ts">
-import { scrollTo } from '@/helpers'
+import { scrollToAnchor } from '@/helpers'
 import { useAppStore } from '@/stores/app'
 
 const appStore = useAppStore()
 </script>
 
 <style lang="scss" scoped>
-@import '@/styles/colors';
-@import '@/styles/layout';
+@use '@/styles/3-helpers' as *;
+
+nav:hover {
+  #logo {
+    scale: 1.05;
+  }
+  #name {
+    opacity: 1;
+  }
+}
 
 #brand {
   display: flex;
   align-items: center;
   padding-left: 40px;
+  cursor: pointer;
+  flex-shrink: 1;
+
+  &:hover {
+    #name {
+      text-shadow: 0 0 10px $accent;
+      scale: 1.05;
+    }
+  }
 }
 
 #logo {
@@ -30,7 +46,8 @@ const appStore = useAppStore()
   background-size: contain;
   background-repeat: no-repeat;
   border-radius: 10%;
-  cursor: pointer;
+  transition: all 0.3s;
+  margin-right: 10px;
 }
 
 #name {
@@ -38,7 +55,7 @@ const appStore = useAppStore()
   font-size: 2rem;
   font-weight: 500;
   line-height: 1.5;
-  color: #fff;
+  color: $light-text;
   user-select: none;
   opacity: 0;
   transition: all 0.3s;

@@ -5,4 +5,5 @@ export type LinkType = {
   anchor?: string
   icon?: string
   newTab?: boolean
+  showInNav?: boolean
 }

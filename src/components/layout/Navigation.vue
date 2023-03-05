@@ -10,7 +10,7 @@
         </div>
       </div>
       <ul>
-        <template v-for="link in props.links" :key="link.label">
+        <template v-for="link in links" :key="link.label">
           <NavigationButtonVue :link="link" />
         </template>
       </ul>
@@ -22,32 +22,31 @@
 import NavigationBrandVue from './NavigationBrand.vue'
 import NavigationButtonVue from './NavigationButton.vue'
 import { useAppStore } from '@/stores/app'
-import { LinkType } from '@/types'
+import pageLinks from '@/pages/PageLinks'
 
-const props = defineProps<{ links: LinkType[] }>()
+const links = pageLinks.filter((link) => link.showInNav)
 
 const store = useAppStore()
 </script>
 
 <style lang="scss" scoped>
-@import '@/styles/colors';
-@import '@/styles/layout';
+@use '@/styles/3-helpers' as *;
+
 /*** Navigation Styles ***/
 nav {
   width: 100vw;
   height: $nav-height-scroll;
   background: $nav-bg;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   position: fixed;
   z-index: 10;
   transition: all 0.3s;
   box-shadow: 0 4px 20px -5px rgba(#000, 0.4);
   opacity: 0.8;
+  &.near-top,
   &:hover {
-    opacity: 1;
-  }
-  &.near-top {
     box-shadow: 0 4px 5px -5px rgba(#000, 0.2);
     height: $nav-height-top;
     opacity: 1;

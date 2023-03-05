@@ -1,0 +1,8 @@
+@use '@/styles/3-helpers' as *;
+
+#app {
+  background-color: $header-bg;
+  color: $light-text;
+  font-family: 'Rubik', sans-serif;
+  letter-spacing: 0.05rem;
+}

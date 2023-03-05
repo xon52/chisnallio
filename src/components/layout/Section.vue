@@ -8,17 +8,9 @@
 <script setup lang="ts"></script>
 
 <style lang="scss" scoped>
-@import '@/styles/colors';
-@import '@/styles/layout';
+@use '@/styles/3-helpers' as *;
 
 section {
-  width: 100vw;
-  height: calc(100vh - #{$nav-height-scroll});
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  scroll-snap-align: center;
   &:nth-child(odd) {
     background: $pink;
   }
