@@ -126,7 +126,6 @@ li {
     display: inline-block;
     width: 100vw;
     height: 0;
-    background-color: $aqua;
     position: absolute;
     top: $nav-height-top;
     box-shadow: 0 5px 30px -4px rgba(#000, 0.2);

@@ -1,6 +1,6 @@
 <template>
   <div id="brand" @click="scrollToAnchor('Intro', 160)">
-    <div id="logo"></div>
+    <div id="logo" v-if="appStore.mdAndUp"></div>
     <span id="name" :class="{ 'near-top': appStore.nearTop }">Keagan Chisnall</span>
   </div>
 </template>

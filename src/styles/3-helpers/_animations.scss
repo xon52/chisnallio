@@ -1,0 +1,10 @@
+@keyframes slide-left {
+  0% {
+    transform: translate(30%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0px);
+    opacity: 1;
+  }
+}

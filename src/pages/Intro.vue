@@ -1,15 +1,16 @@
 <template>
-  <div class="hero">
-    <div class="quote">
-      <h1>👋 I'm <span class="highlight">Keagan</span></h1>
-      <h3>
-        I'm an <span class="highlight">Engineering Manager</span><br />
-        and I love to <span class="highlight">learn 📚</span>, <span class="highlight">lead 👨‍🏫</span>,<br />
-        and
-        <span class="highlight">collaborate 🤝</span>
-      </h3>
+  <section id="Intro">
+    <div class="hero">
+      <div class="quote">
+        <h1>👋 I'm <span class="highlight">Keagan</span></h1>
+        <h3>
+          I'm <span class="highlight">passionate</span> about <span class="highlight">people </span> and
+          <span class="highlight">products</span> that dare to <span class="highlight">challenge</span>
+          <span class="highlight">💓👥🚀✨</span>
+        </h3>
+      </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup lang="ts"></script>
@@ -19,7 +20,6 @@
 
 .hero {
   display: flex;
-  background-color: $header-bg;
   background-attachment: scroll;
   background-clip: padding-box;
   background-image: url(@/assets/Profile.png);
@@ -39,15 +39,18 @@
   margin-top: 25vh;
   text-align: left;
   width: auto;
+  max-width: 35%;
   user-select: none;
   background-color: rgba(0, 0, 0, 0.2);
   padding: 1rem;
   border-radius: 40px;
+  animation: slide-left 1s linear forwards;
 }
 
 .highlight {
   text-shadow: 0 0 2px $light-text;
   transition: all 0.3s ease-in-out;
+  display: inline-block;
   &:hover {
     text-shadow: 0 0 5px $light-text;
   }
@@ -58,7 +61,7 @@
     margin: 3rem 1rem;
     align-self: first baseline;
     text-align: center;
-    width: 100vw;
+    max-width: 100vw;
   }
 }
 </style>

@@ -4,7 +4,11 @@
   padding: 0;
 }
 
-html,
+html {
+  overflow: auto;
+}
+
 body {
   overflow: hidden;
+  scroll-behavior: smooth;
 }

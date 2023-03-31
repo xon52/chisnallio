@@ -1,10 +1,12 @@
 <template>
-  <form @submit.prevent="sendEmail">
-    <input type="text" name="name" required v-model="name" />
-    <input type="email" name="email" required v-model="email" />
-    <textarea name="message" required v-model="message"></textarea>
-    <button type="submit">Send Message</button>
-  </form>
+  <section id="Contact">
+    <form @submit.prevent="sendEmail">
+      <input type="text" name="name" required v-model="name" />
+      <input type="email" name="email" required v-model="email" />
+      <textarea name="message" required v-model="message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
 </template>
 
 <script setup lang="ts">
@@ -23,7 +25,7 @@ const sendEmail = async () => {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      access_key: process.env.VUE_APP_CONTACT_KEY,
+      access_key: process.env.VITE_APP_CONTACT_KEY,
       name: name.value,
       email: email.value,
       message: message.value,
@@ -33,15 +35,3 @@ const sendEmail = async () => {
   else log('Email failed to send', 'warning')
 }
 </script>
-
-<style lang="scss" scoped>
-.contact {
-  h1 {
-    text-align: center;
-  }
-  form {
-    max-width: 500px;
-    margin: 0 auto;
-  }
-}
-</style>
