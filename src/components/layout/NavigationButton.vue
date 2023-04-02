@@ -16,7 +16,7 @@ const offset = 70
 </script>
 
 <style lang="scss" scoped>
-@use '@/styles/3-helpers' as *;
+@use '@/styles/helpers' as *;
 
 li {
   display: flex;

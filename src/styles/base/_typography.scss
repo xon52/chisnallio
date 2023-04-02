@@ -1,5 +1,5 @@
 
-@use '@/styles/3-helpers' as *;
+@use '@/styles/helpers' as *;
 
 @font-face {
   font-family: 'LaBelleAurore';
@@ -28,13 +28,13 @@ body {
 
 @include sm-and-down {
   body {
-    font-size: 60%;
+    font-size: 70%;
   }
 }
 
 @include xs-and-down {
   body {
-    font-size: 50%;
+    font-size: 60%;
   }
 }
 

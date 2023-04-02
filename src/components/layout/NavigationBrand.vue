@@ -13,7 +13,7 @@ const appStore = useAppStore()
 </script>
 
 <style lang="scss" scoped>
-@use '@/styles/3-helpers' as *;
+@use '@/styles/helpers' as *;
 
 nav:hover {
   #logo {

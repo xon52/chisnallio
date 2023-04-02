@@ -16,7 +16,11 @@
 <script setup lang="ts"></script>
 
 <style lang="scss" scoped>
-@use '@/styles/3-helpers' as *;
+@use '@/styles/helpers' as *;
+
+#Intro {
+  background-color: $black-bg;
+}
 
 .hero {
   display: flex;

@@ -1,4 +1,3 @@
-import { PageLinkType } from './PageLinkType'
-import { SvgType } from './SvgType'
-
-export type { PageLinkType, SvgType }
+export type { PageLinkType } from './PageLinkType'
+export type { SvgType } from './SvgType'
+export type { HistoryType } from './HistoryType'

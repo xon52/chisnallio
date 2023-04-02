@@ -1,4 +1,4 @@
-@use '@/styles/3-helpers' as *;
+@use '@/styles/helpers' as *;
 
 main {
   scroll-snap-type: y proximity;
@@ -7,7 +7,7 @@ main {
 section {
   display: flex;
   width: 100%;
-  height: calc(100vh - #{$nav-height-scroll});
+  min-height: calc(100vh - #{$nav-height-scroll});
   flex-direction: column;
   align-items: center;
   justify-content: center;

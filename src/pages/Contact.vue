@@ -35,3 +35,11 @@ const sendEmail = async () => {
   else log('Email failed to send', 'warning')
 }
 </script>
+
+<style lang="scss" scoped>
+@use '@/styles/helpers' as *;
+
+#Contact {
+  background-color: $green-bg;
+}
+</style>

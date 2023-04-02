@@ -22,9 +22,9 @@
 <script setup lang="ts">
 import NavigationVue from './components/layout/Navigation.vue'
 import ContactVue from './pages/Contact.vue'
-import HistoryVue from './pages/History.vue'
+import HistoryVue from './pages/History/History.vue'
 import IntroVue from './pages/Intro.vue'
-import PortfolioVue from './pages/Portfolio.vue'
+import PortfolioVue from './pages/Portfolio/Portfolio.vue'
 
 import { useAppStore } from './stores/app'
 import { onMounted } from 'vue'
@@ -36,17 +36,13 @@ onMounted(() => {
 })
 </script>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+<style lang="scss" scoped>
+@use '@/styles/helpers' as *;
+
+#app {
+  background-color: $black-bg;
+  color: $light-text;
+  font-family: 'Rubik', sans-serif;
+  letter-spacing: 0.05rem;
 }
 </style>
