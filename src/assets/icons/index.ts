@@ -1,6 +1,7 @@
 import { SvgType } from '@/types'
 
 import bars from './bars'
+import briefcase from './briefcase'
 import circleUser from './circleUser'
 import contact from './contact'
 import cubes from './cubes'
@@ -17,6 +18,7 @@ import xMark from './xMark'
 
 export default {
   bars,
+  briefcase,
   circleUser,
   contact,
   cubes,
