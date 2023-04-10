@@ -1,9 +1,13 @@
 <template>
   <div class="timeline">
-    <template v-for="({ title, date, summary, imgUrl }, index) in items">
-      <div class="event" :class="{ reverse: index % 2 !== 0 }" :style="getColors(index)">
+    <template v-for="({ title, date, summary, imgUrl, companyUrl }, index) in items">
+      <div class="event" :style="getColors(index)">
         <div class="badge">
-          <img v-if="imgUrl" :src="imgUrl" :alt="title" />
+          <template v-if="imgUrl">
+            <a class="logo" :href="companyUrl" target="_blank" :data-tooltip="companyUrl ? 'Visit website' : ''">
+              <img :src="imgUrl" :alt="title" :class="{ link: companyUrl }" />
+            </a>
+          </template>
           <IconVue v-else icon="briefcase" size="100%" />
           <div class="line-left"></div>
           <div class="line-down"></div>
@@ -12,9 +16,12 @@
           <div class="date">
             <h4>{{ date }}</h4>
           </div>
+          <img v-if="imgUrl" class="logo-mobile" :src="imgUrl" :alt="title" />
           <div class="content">
             <div class="title">
-              <h4>{{ title }}</h4>
+              <h4>
+                {{ title }} <span class="date-mobile">{{ date }}</span>
+              </h4>
             </div>
             <div class="summary">
               <p>
@@ -34,6 +41,7 @@ import { HistoryType } from '@/types'
 
 const { items } = defineProps<{ items: HistoryType[] }>()
 
+// Colour options
 const getColors = (index: number) => {
   if (index % 3 === 0)
     return {
@@ -50,8 +58,6 @@ const getColors = (index: number) => {
     '--color2': '#aff1b6',
   }
 }
-
-const emit = defineEmits(['click'])
 </script>
 
 <style lang="scss" scoped>
@@ -66,13 +72,13 @@ $spacing: 20px;
 .timeline {
   width: 90vw;
   max-width: 800px;
-  margin: calc(2 * $spacing) 0;
 
   .event {
     display: flex;
     align-items: center;
     justify-items: center;
     margin: calc(2 * $spacing) auto;
+    flex-direction: row;
 
     .badge {
       border-radius: 50%;
@@ -81,7 +87,8 @@ $spacing: 20px;
         0 -12px 36px -8px rgba(0, 0, 0, 0.025);
       animation: bouncing 0.5s 0.3s;
       position: relative;
-      img {
+      margin: 0 calc(2 * $spacing) 0 0;
+      .logo {
         border-radius: 50%;
         height: $badge-width;
         width: $badge-width;
@@ -91,11 +98,18 @@ $spacing: 20px;
         border-style: solid;
         border-color: var(--color1);
         z-index: 4;
-        &:hover {
-          transform: scale(2, 2);
-          border-radius: 10%;
-          border-width: 5px;
-          animation: bouncing-2 0.5s 0.3s;
+        overflow: hidden;
+        position: relative;
+
+        &:hover::after {
+          content: attr(data-tooltip);
+          background-color: adjust-color($color: $black-bg, $alpha: -0.9);
+          color: adjust-color($color: $black-bg);
+          padding: 2px;
+          font-size: small;
+          position: absolute;
+          bottom: 0;
+          right: 0;
         }
       }
       svg {
@@ -126,11 +140,16 @@ $spacing: 20px;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
+        right: auto;
+        left: 0%;
+        animation: fillLeftOdd forwards 4s ease-in-out;
       }
     }
 
     .wrapper {
       display: flex;
+      align-items: stretch;
+      background: $white-bg;
       width: 100%;
       box-shadow: 0 30px 60px -12px rgba(50, 50, 100, 0.25), 0 18px 36px -18px rgba(0, 0, 0, 0.3),
         0 -12px 36px -8px rgba(0, 0, 0, 0.025);
@@ -138,19 +157,34 @@ $spacing: 20px;
       border-radius: $card-border-radius;
       z-index: 1;
 
+      .logo-mobile {
+        display: none;
+        height: 15vw;
+        width: 15vw;
+        align-self: center;
+        border-radius: $card-border-radius 0 0 $card-border-radius;
+      }
+
       .content {
-        background: $white-bg;
         display: flex;
         flex-direction: column;
         z-index: 2;
         padding: $spacing;
         width: 100%;
+        border-radius: 0 $card-border-radius $card-border-radius 0;
 
         .title {
           color: var(--color1);
-          margin-bottom: $spacing;
+          margin-bottom: calc($spacing / 2);
+          .date-mobile {
+            display: none;
+            background-color: var(--color1);
+            color: var(--color2);
+            padding: 0 0.75em;
+            border-radius: 1em;
+            margin-left: 0.5em;
+          }
         }
-
         .summary {
         }
       }
@@ -163,39 +197,29 @@ $spacing: 20px;
         display: flex;
         align-items: center;
         justify-content: center;
+        border-radius: $card-border-radius 0 0 $card-border-radius;
       }
     }
 
-    // Reversible event parts
-    &:not(.reverse) {
-      flex-direction: row;
+    // Event hover
+    &:hover {
       .badge {
-        margin-right: calc(2 * $spacing);
-        img {
-          &:hover {
-            border-style: inset;
-          }
-        }
-        .line-left {
-          right: auto;
-          left: 0%;
-          animation: fillLeftOdd forwards 4s ease-in-out;
-        }
-      }
-      .wrapper {
-        .content {
-          border-radius: 0 $card-border-radius $card-border-radius 0;
-        }
-        .date {
-          border-radius: $card-border-radius 0 0 $card-border-radius;
+        .logo {
+          transform: scale(2, 2);
+          border-radius: 10%;
+          border-width: 5px;
+          animation: bouncing-2 0.5s 0.3s;
+          border-style: inset;
         }
       }
     }
-    &.reverse {
+
+    // Even events
+    &:nth-of-type(2n) {
       flex-direction: row-reverse;
       .badge {
-        margin-left: calc(2 * $spacing);
-        img {
+        margin: 0 0 0 calc(2 * $spacing);
+        .logo {
           &:hover {
             border-style: outset;
           }
@@ -214,10 +238,42 @@ $spacing: 20px;
           border-radius: 0 $card-border-radius $card-border-radius 0;
         }
       }
+      &:hover {
+        .badge {
+          .logo {
+            border-style: outset;
+          }
+        }
+      }
     }
+    // Last Event
     &:last-of-type {
       .line-down {
         display: none;
+      }
+    }
+  }
+}
+
+// Mobile
+@include md-and-down {
+  .event {
+    flex-direction: row !important;
+    .badge {
+      display: none !important;
+    }
+    .wrapper {
+      .date {
+        display: none !important;
+      }
+      .logo-mobile {
+        display: block !important;
+      }
+      .content {
+        padding: 10px 10px !important;
+        .date-mobile {
+          display: inline-block !important;
+        }
       }
     }
   }

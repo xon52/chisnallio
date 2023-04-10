@@ -11,6 +11,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev-mob": "vite --host",
     "build": "vue-tsc && vite build",
     "preview": "vite preview"
   },

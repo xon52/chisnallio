@@ -7,6 +7,7 @@ const histories: HistoryType[] = [
     imgUrl: new URL('/src/assets/images/sc-logo.png', import.meta.url).href,
     summary:
       'Officially joined the tech industry to lead a team of 5-12 engineers in the user management and access control space.',
+      companyUrl:'https://safetyculture.com/'
   },
   {
     title: '💊 Co-founder of Medicly',

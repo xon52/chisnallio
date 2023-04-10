@@ -1,5 +1,6 @@
 <template>
   <section id="History">
+    <h1>Employment History</h1>
     <TimelineVue :items="events" />
   </section>
 </template>
@@ -14,5 +15,6 @@ import TimelineVue from '@/components/timeline/Timeline.vue'
 
 #History {
   background-color: $orange-bg;
+  padding: 5em;
 }
 </style>

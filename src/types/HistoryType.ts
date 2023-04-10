@@ -4,4 +4,5 @@ export type HistoryType = {
   summary: string
   icon?: string
   imgUrl?: string
+  companyUrl?: string
 }
