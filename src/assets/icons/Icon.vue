@@ -1,5 +1,5 @@
 <template>
-  <svg class="my-svg" :style="`max-height:${size}; max-width:${size};`" :viewBox="icon.viewBox">
+  <svg class="my-svg" :style="`max-height:${size}; max-width:${size}; height:${size}`" :viewBox="icon.viewBox">
     <path :d="icon.path" :fill="fill" :stroke="stroke" :stroke-width="strokeWidth" />
   </svg>
 </template>

@@ -1,5 +1,4 @@
 import type { PageLinkType } from '@/types'
-import { defineAsyncComponent } from 'vue'
 
 const links: PageLinkType[] = [
   {
@@ -8,9 +7,15 @@ const links: PageLinkType[] = [
     showInNav: false,
   },
   {
+    label: 'Skills',
+    anchor: 'Skills',
+    icon: 'squares',
+    showInNav: true,
+  },
+  {
     label: 'Portfolio',
     anchor: 'Portfolio',
-    icon: 'squares',
+    icon: 'trophy',
     showInNav: true,
   },
   {

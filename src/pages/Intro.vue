@@ -2,12 +2,12 @@
   <section id="Intro">
     <div class="hero">
       <div class="quote">
-        <h1>👋 I'm <span class="highlight">Keagan</span></h1>
-        <h3>
+        <h2>👋 I'm <span class="highlight">Keagan</span></h2>
+        <h4>
           I'm <span class="highlight">passionate</span> about <span class="highlight">people </span> and
-          <span class="highlight">products</span> that dare to <span class="highlight">challenge</span>
+          <span class="highlight">products</span> that <span class="highlight">challenge</span>
           <span class="highlight">💓👥🚀✨</span>
-        </h3>
+        </h4>
       </div>
     </div>
   </section>

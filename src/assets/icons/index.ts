@@ -5,6 +5,7 @@ import briefcase from './briefcase'
 import circleUser from './circleUser'
 import contact from './contact'
 import cubes from './cubes'
+import discord from './discord'
 import envelope from './envelope'
 import github from './github'
 import house from './house'
@@ -23,6 +24,7 @@ export default {
   circleUser,
   contact,
   cubes,
+  discord,
   envelope,
   github,
   house,

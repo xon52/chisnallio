@@ -18,7 +18,6 @@ defineProps<{ icon?: string; imgUrl?: string; title: string; date: string; summa
 <style lang="scss" scoped>
 @use '@/styles/helpers' as *;
 @use 'sass:color';
-// ----------------------------------------
 
 $color: rgb(255, 187, 0);
 $history-background: color.adjust($color, $lightness: 10%);

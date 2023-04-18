@@ -2,6 +2,7 @@
   <NavigationVue />
   <main>
     <IntroVue />
+    <SkillsVue />
     <PortfolioVue />
     <HistoryVue />
     <ContactVue />
@@ -21,10 +22,11 @@
 
 <script setup lang="ts">
 import NavigationVue from './components/layout/Navigation.vue'
-import ContactVue from './pages/Contact.vue'
+import SkillsVue from './pages/Skills/Skills.vue'
 import HistoryVue from './pages/History/History.vue'
 import IntroVue from './pages/Intro.vue'
 import PortfolioVue from './pages/Portfolio/Portfolio.vue'
+import ContactVue from './pages/Contact/Contact.vue'
 
 import { useAppStore } from './stores/app'
 import { onMounted } from 'vue'

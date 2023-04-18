@@ -24,3 +24,19 @@
     transform: scale(0.95, 1.05);
   }
 }
+
+@keyframes spinning2 {
+  from,
+  to {
+    transform: rotate(0);
+  }
+  25% {
+    transform: scale(270deg);
+  }
+  50% {
+    transform: scale(420deg);
+  }
+  75% {
+    transform: scale(300deg);
+  }
+}

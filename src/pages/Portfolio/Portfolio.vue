@@ -17,7 +17,7 @@ import projects from './projects.ts'
 @use '@/styles/helpers' as *;
 
 #Portfolio {
-  background-color: $blue-bg;
+  background-color: $green-bg;
 }
 
 .projects {
