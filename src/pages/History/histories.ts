@@ -55,7 +55,7 @@ const histories: HistoryType[] = [
     summary: 'Worked in various R&D and project management roles',
   },
   {
-    title: '🎓 Bachelor of Chemical Engineering',
+    title: '🎓 Bachelor of Engineering',
     date: '2007',
     imgUrl: new URL('/src/assets/images/jcu-logo.png', import.meta.url).href,
     summary: 'Graduated with first class honours in Chemical Engineering from James Cook University, Australia',

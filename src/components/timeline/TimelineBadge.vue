@@ -34,7 +34,7 @@ const { item, reverse } = defineProps<{ item: HistoryType; reverse?: boolean }>(
     height: $badge-width;
     width: $badge-width;
     object-fit: cover;
-    transition: all 0.5s 0.2s ease-in-out;
+    transition: all 0.3s 0.1s ease-in-out;
     border-width: 2px;
     transform: scale(1, 1);
     border-style: inset;
@@ -105,22 +105,6 @@ const { item, reverse } = defineProps<{ item: HistoryType; reverse?: boolean }>(
 @include md-and-down {
   .badge {
     display: none !important;
-  }
-}
-
-@keyframes bouncing-2 {
-  from,
-  to {
-    transform: scale(2, 2);
-  }
-  25% {
-    transform: scale(1.8, 2.2);
-  }
-  50% {
-    transform: scale(2.2, 1.8);
-  }
-  75% {
-    transform: scale(1.9, 2.1);
   }
 }
 

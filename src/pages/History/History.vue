@@ -1,6 +1,6 @@
 <template>
   <section id="History">
-    <h1>Employment History</h1>
+    <h1 class="fancy-text highlight">Professional History ⏳</h1>
     <TimelineVue :items="events" />
   </section>
 </template>

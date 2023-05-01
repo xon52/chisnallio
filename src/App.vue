@@ -6,6 +6,7 @@
     <PortfolioVue />
     <HistoryVue />
     <ContactVue />
+    <!-- <div class="fire" style="height: 100vh; width: 100vw"></div> -->
   </main>
   <!-- <div>
     <a href="https://vitejs.dev" target="_blank">
@@ -40,6 +41,7 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 @use '@/styles/helpers' as *;
+@use '@/styles/special' as *;
 
 #app {
   background-color: $black-bg;

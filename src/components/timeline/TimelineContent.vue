@@ -68,7 +68,9 @@ const { item, reverse } = defineProps<{ item: HistoryType; reverse?: boolean }>(
         margin-left: 0.5em;
       }
     }
+    .title,
     .summary {
+      pointer-events: none;
     }
   }
 
@@ -93,7 +95,7 @@ const { item, reverse } = defineProps<{ item: HistoryType; reverse?: boolean }>(
   }
 }
 
-// Mobile
+// Tablet
 @include md-and-down {
   .wrapper {
     padding: calc($spacing / 2) !important;
@@ -101,7 +103,7 @@ const { item, reverse } = defineProps<{ item: HistoryType; reverse?: boolean }>(
       display: none !important;
     }
     .logo-mobile {
-      display: block !important;
+      display: block;
     }
     .content {
       .date-mobile {
@@ -112,8 +114,8 @@ const { item, reverse } = defineProps<{ item: HistoryType; reverse?: boolean }>(
 }
 
 // Mobile
-@include md-and-down {
-  .badge {
+@include xs-and-down {
+  .logo-mobile {
     display: none !important;
   }
 }

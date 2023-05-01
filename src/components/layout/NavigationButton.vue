@@ -11,7 +11,7 @@ import { scrollToAnchor } from '@/helpers'
 import { PageLinkType } from '@/types'
 
 const { link } = defineProps<{ link: PageLinkType }>()
-// console.log(variables)
+// TODO: SCSS $nav-height-scroll
 const offset = 70
 </script>
 

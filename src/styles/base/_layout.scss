@@ -13,6 +13,7 @@ section {
   justify-content: center;
   scroll-snap-align: center;
   background: $black-bg;
+  position: relative;
 
   &:first-of-type {
     height: calc(100% - #{$nav-height-top});

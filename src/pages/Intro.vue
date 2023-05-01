@@ -2,11 +2,11 @@
   <section id="Intro">
     <div class="hero">
       <div class="quote">
-        <h2>👋 I'm <span class="highlight">Keagan</span></h2>
+        <h3>👋 I'm <span class="highlight">Keagan</span></h3>
         <h4>
           I'm <span class="highlight">passionate</span> about <span class="highlight">people </span> and
-          <span class="highlight">products</span> that <span class="highlight">challenge</span>
-          <span class="highlight">💓👥🚀✨</span>
+          <span class="highlight">products</span> that <span class="highlight">change</span> our world
+          <span class="highlight">💓👥🚀✨🌏</span>
         </h4>
       </div>
     </div>
@@ -49,15 +49,6 @@
   padding: 1rem;
   border-radius: 40px;
   animation: slide-left 1s linear forwards;
-}
-
-.highlight {
-  text-shadow: 0 0 2px $light-text;
-  transition: all 0.3s ease-in-out;
-  display: inline-block;
-  &:hover {
-    text-shadow: 0 0 5px $light-text;
-  }
 }
 
 @include sm-and-down {

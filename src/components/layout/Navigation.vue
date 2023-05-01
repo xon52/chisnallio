@@ -1,32 +1,27 @@
 <template>
-  <nav :class="{ 'near-top': store.nearTop }">
+  <nav :class="{ 'near-top': appStore.nearTop }">
     <NavigationBrandVue />
-    <div id="menu">
-      <div id="menu-toggle">
-        <div id="menu-icon">
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-        </div>
-      </div>
+    <div v-if="appStore.smAndUp" id="menu">
       <ul>
         <template v-for="link in links" :key="link.label">
           <NavigationButtonVue :link="link" />
         </template>
       </ul>
     </div>
+    <NavigationMobileVue v-else :links="links" />
   </nav>
 </template>
 
 <script setup lang="ts">
 import NavigationBrandVue from './NavigationBrand.vue'
 import NavigationButtonVue from './NavigationButton.vue'
+import NavigationMobileVue from './NavigationMobile.vue'
 import { useAppStore } from '@/stores/app'
 import pageLinks from '@/pages/PageLinks'
 
 const links = pageLinks.filter((link) => link.showInNav)
 
-const store = useAppStore()
+const appStore = useAppStore()
 </script>
 
 <style lang="scss" scoped>

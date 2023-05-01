@@ -30,13 +30,11 @@ const buttons = [
   align-items: center;
   justify-items: center;
 }
-.highlight {
-  color: $light-text;
-  text-shadow: 0 0 2px $light-text;
-  transition: all 0.3s ease-in-out;
-  display: inline-block;
-  &:hover {
-    text-shadow: 0 0 5px $light-text;
+
+// Mobile
+@include sm-and-down {
+  .contact-buttons {
+    flex-direction: column;
   }
 }
 </style>
