@@ -3,24 +3,3 @@
 main {
   scroll-snap-type: y proximity;
 }
-
-section {
-  display: flex;
-  width: 100%;
-  min-height: calc(100vh - #{$nav-height-scroll});
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  scroll-snap-align: center;
-  background: $black-bg;
-  position: relative;
-
-  &:first-of-type {
-    height: calc(100% - #{$nav-height-top});
-  }
-
-  // Mobile
-  @include sm-and-down {
-    min-height: 100vh;
-  }
-}

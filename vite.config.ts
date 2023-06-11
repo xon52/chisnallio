@@ -1,7 +1,6 @@
 import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vite'
 import packageJson from './package.json'
-import vue from '@vitejs/plugin-vue'
 
 // Custom HTML replace plugin
 const indexReplace = () => ({
@@ -16,7 +15,7 @@ const indexReplace = () => ({
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue(), indexReplace()],
+  plugins: [indexReplace()],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),

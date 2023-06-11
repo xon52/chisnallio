@@ -1,0 +1,99 @@
+@use '@/styles/helpers' as *;
+
+#nav-web {
+  width: 100vw;
+  height: $nav-height-scroll;
+  background: $nav-bg;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 10;
+  transition: all 0.3s;
+  box-shadow: 0 4px 20px -5px rgba(#000, 0.4);
+  opacity: 0.8;
+  &.near-top,
+  &:hover {
+    box-shadow: 0 4px 5px -5px rgba(#000, 0.2);
+    height: $nav-height-top;
+    opacity: 1;
+
+    .web-brand {
+      .web-brand-logo {
+        scale: 1.05;
+      }
+      .web-brand-name {
+        opacity: 1;
+      }
+    }
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    padding-right: 2rem;
+  }
+
+  .web-brand {
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    cursor: pointer;
+    flex-shrink: 1;
+
+    &:hover {
+      .web-brand-name {
+        text-shadow: 0 0 10px $accent;
+        scale: 1.05;
+      }
+    }
+  }
+
+  .web-brand-logo {
+    width: $nav-height-scroll;
+    height: $nav-height-scroll;
+    background-image: url(images/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 10%;
+    transition: all 0.3s;
+    margin-right: 1rem;
+  }
+
+  .web-brand-name {
+    font-family: LaBelleAurore, sans-serif, serif;
+    font-size: 2rem;
+    color: $light-text;
+    user-select: none;
+    transition: all 0.3s;
+    opacity: 1 !important;
+  }
+  li {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    list-style: none;
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.5;
+    color: $light-text;
+    cursor: pointer;
+    border-radius: 50% 0 0 50%;
+    transition: all 0.2s ease-in-out;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+
+    &:hover {
+      background-color: rgba($color: $light-text, $alpha: 0.2);
+    }
+
+    &:active {
+      outline: none;
+      background-color: rgba($color: $light-text, $alpha: 0.5);
+    }
+
+    svg {
+      margin-right: 0.5rem;
+    }
+  }
+}

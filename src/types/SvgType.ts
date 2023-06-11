@@ -1,1 +1,1 @@
-export type SvgType = { path: string; viewBox: string }
+export type SvgType = { path: string | string[]; viewBox: string };

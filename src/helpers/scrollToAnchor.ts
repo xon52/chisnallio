@@ -3,7 +3,7 @@ import getElementFromAnchor from './getElementFromAnchor'
 
 export default async (anchor: string, offset: number = 0) => {
   // Get the element
-  const element = await getElementFromAnchor(anchor)
+  const element = getElementFromAnchor(anchor)
   const targetTop = Math.max(element.getBoundingClientRect().top + globalThis.scrollY - offset, 0)
 
   // If the target is already in view, scroll a little bit to trigger the smooth scroll
