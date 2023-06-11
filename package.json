@@ -11,12 +11,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
-    "knip": "knip --production"
+    "build": "tsc && vite build"
   },
   "devDependencies": {
     "@types/node": "^20.2.3",
-    "knip": "^2.13.0",
     "sass": "^1.62.1",
     "typescript": "^5.0.2",
     "vite": "^4.3.2"
