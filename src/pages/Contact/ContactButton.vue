@@ -1,19 +1,40 @@
 <template>
-  <div class="contact-button" :style="`--color:${color}`" @click="open">
+  <div class="contact-button" :style="`--color:${color}`" @click="onClick">
     <h4 class="label">{{ label }}</h4>
     <IconVue class="logo" :icon="icon" />
-    <h6 v-if="appStore.mdAndUp" class="label"><IconVue icon="newTab" /></h6>
+    <h6 v-if="appStore.mdAndUp" class="label">
+      <IconVue v-if="url" icon="newTab" />
+      <span v-else-if="copy"> <IconVue icon="copy" /> Copy ID </span>
+    </h6>
+    <h4 :class="{ showCopiedText: copied }" class="copied-text">ID Copied</h4>
   </div>
 </template>
 
 <script setup lang="ts">
 import IconVue from '@/assets/icons/Icon.vue'
 import { useAppStore } from '@/stores/app'
+import { ref } from 'vue'
 
-const { url, label, icon, color } = defineProps<{ url: string; label: string; icon: string; color: string }>()
+const { url, label, icon, copy, color } = defineProps<{
+  url?: string
+  label: string
+  icon: string
+  copy?: string
+  color?: string
+}>()
+
+const copied = ref(false)
+
 const appStore = useAppStore()
 
-const open = () => globalThis.open(url, '_blank')
+const onClick = () => {
+  if (url) globalThis.open(url, '_blank')
+  else if (copy) {
+    navigator.clipboard.writeText(copy)
+    copied.value = true
+    setTimeout(() => (copied.value = false), 2000)
+  }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -40,17 +61,34 @@ $spacing: 20px;
   position: relative;
   transition: 0.3s all ease-in-out;
   width: $contact-width;
+  overflow: hidden;
   .logo {
     font-size: $contact-width;
     transform: scale(0.8, 0.8);
     transition: 0.3s all ease-in-out;
   }
-
   .label {
     color: $light-text;
     display: inline-block;
     opacity: 0;
     height: 0;
+  }
+  .copied-text {
+    opacity: 0;
+    background-color: #ffffffcc;
+    position: absolute;
+    padding: 0.5em 1em;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    transition: opacity 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .showCopiedText {
+    opacity: 1;
   }
 
   &:hover {

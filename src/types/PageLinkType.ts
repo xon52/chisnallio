@@ -4,6 +4,7 @@ export type PageLinkType = {
   label: string
   anchor: string
   icon?: string
-  showInNav?: boolean
+  showInWebNav?: boolean
+  showInMobNav?: boolean
   component?: DefineComponent<{}, {}, any>
 }

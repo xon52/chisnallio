@@ -5,6 +5,11 @@
   src: url('@/assets/fonts/DancingScript-VariableFont_wght.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'LaBelleAurore';
+  src: url('@/assets/fonts/LaBelleAurore.woff2') format('woff2');
+}
+
 body {
   font-size: 120%;
   line-height: 1.5;

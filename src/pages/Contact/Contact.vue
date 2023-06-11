@@ -2,8 +2,8 @@
   <section id="Contact">
     <h1 class="fancy-text highlight">Let's connect ☕</h1>
     <div class="contact-buttons">
-      <template v-for="{ url, label, icon, color } in buttons">
-        <ContactButtonVue :url="url" :label="label" :icon="icon" :color="color" />
+      <template v-for="{ url, label, icon, color, copy } in contacts">
+        <ContactButtonVue :url="url" :label="label" :icon="icon" :color="color" :copy="copy" />
       </template>
     </div>
   </section>
@@ -11,12 +11,7 @@
 
 <script setup lang="ts">
 import ContactButtonVue from './ContactButton.vue'
-
-const buttons = [
-  { label: 'LinkedIn', url: '', icon: 'linkedin', color: '#0077B5' },
-  { label: 'Github', url: '', icon: 'github', color: 'white' },
-  { label: 'Discord', url: '', icon: 'discord', color: '#5865f2' },
-]
+import contacts from './contacts';
 </script>
 
 <style lang="scss" scoped>

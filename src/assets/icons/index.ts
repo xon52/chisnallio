@@ -4,6 +4,7 @@ import bars from './bars'
 import briefcase from './briefcase'
 import circleUser from './circleUser'
 import contact from './contact'
+import copy from './copy'
 import cubes from './cubes'
 import discord from './discord'
 import envelope from './envelope'
@@ -23,6 +24,7 @@ export default {
   briefcase,
   circleUser,
   contact,
+  copy,
   cubes,
   discord,
   envelope,

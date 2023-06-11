@@ -1,5 +1,5 @@
 <template>
-  <div class="nav-toggle-btn" :class="{ open: isOpen }" @click="onClick">
+  <div class="hamburger" :class="{ open: isOpen }" @click="onClick">
     <span></span>
     <span></span>
     <span></span>
@@ -15,38 +15,43 @@ const onClick = () => emit('click')
 <style lang="scss" scoped>
 @use '@/styles/helpers' as *;
 
-.nav-toggle-btn {
+$size: 60px;
+$spacing: 10px;
+$thickness: 5px;
+$z-index: 100;
+
+.hamburger {
   align-items: center;
-  bottom: 10px;
+  bottom: $spacing;
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  left: calc((100% - 60px) / 2);
-  padding: 15px;
+  height: $size;
+  justify-content: center;
   position: fixed;
-  z-index: 1001;
+  width: $size;
+  z-index: 1;
 
   span {
-    height: 2px;
-    width: 30px;
-    background: #fff;
+    height: $thickness;
+    width: $size * 0.5;
+    background: $accent;
     transition: 0.35s ease-in-out;
-    margin: 4px 0;
+    margin: calc(#{$thickness} * -0.5 + 5px);
   }
 
   &.open {
     background: transparent;
     span:nth-child(1) {
-      top: 9px;
-      transform: translateY(10px) rotate(-135deg);
+      top: $spacing;
+      transform: translateY($spacing) rotate(-135deg);
     }
     span:nth-child(2) {
       width: 0;
-      left: 50%;
     }
     span:nth-child(3) {
-      top: 9px;
-      transform: translateY(-10px) rotate(135deg);
+      top: $spacing;
+      transform: translateY($spacing * -1) rotate(135deg);
     }
   }
 }

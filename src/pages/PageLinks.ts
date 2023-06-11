@@ -2,33 +2,39 @@ import type { PageLinkType } from '@/types'
 
 const links: PageLinkType[] = [
   {
-    label: 'Intro',
+    label: 'Me',
     anchor: 'Intro',
-    showInNav: false,
+    icon: 'circleUser',
+    showInMobNav: true,
+    showInWebNav: false,
   },
   {
     label: 'Skills',
     anchor: 'Skills',
     icon: 'squares',
-    showInNav: true,
+    showInMobNav: true,
+    showInWebNav: true,
   },
   {
     label: 'Portfolio',
     anchor: 'Portfolio',
     icon: 'trophy',
-    showInNav: true,
+    showInMobNav: true,
+    showInWebNav: true,
   },
   {
     label: 'History',
     anchor: 'History',
     icon: 'path',
-    showInNav: true,
+    showInMobNav: true,
+    showInWebNav: true,
   },
   {
     label: 'Contact',
     anchor: 'Contact',
     icon: 'contact',
-    showInNav: true,
+    showInMobNav: true,
+    showInWebNav: true,
   },
 ]
 

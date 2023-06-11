@@ -1,10 +1,10 @@
 <template>
   <div :class="{ open }">
-    <nav class="nav-menu">
-      <NavigationMobileButtonVue :is-open="open" @click="onToggle" />
-      <ul>
-        <template v-for="link in links" :key="link.label">
-          <NavigationButtonVue :link="link" @click="onToggle" />
+    <nav class="navigation-mobile">
+      <NavigationHamburgerVue :is-open="open" @click="onClick" />
+      <ul v-if="open">
+        <template v-for="link in links">
+          <NavigationButtonVue :link="link" @click="onClick" />
         </template>
       </ul>
     </nav>
@@ -14,22 +14,26 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import NavigationButtonVue from './NavigationButton.vue'
-import NavigationMobileButtonVue from './NavigationMobileButton.vue'
+import NavigationHamburgerVue from './NavigationHamburger.vue'
 import type { PageLinkType } from '@/types'
 
 const { links } = defineProps<{ links: PageLinkType[] }>()
 const open = ref(false)
-const onToggle = () => (open.value = !open.value)
+const onClick = () => (open.value = !open.value)
 </script>
 
 <style lang="scss" scoped>
 @use '@/styles/helpers' as *;
 
-.nav-menu {
-  width: 60px;
-  height: 60px;
-  left: calc((100% - 60px) / 2);
-  bottom: 10px;
+$size: 60px;
+$spacing: 10px;
+$z-index: 100;
+
+.navigation-mobile {
+  width: $size;
+  height: $size;
+  left: calc((100% - $size) / 2);
+  bottom: $spacing;
   display: flex;
   position: fixed;
   background: $blue-bg;
@@ -37,6 +41,14 @@ const onToggle = () => (open.value = !open.value)
   transition: all 0.3s ease-out;
   align-items: center;
   justify-content: center;
+  opacity: 0.8;
+  z-index: $z-index;
+  box-shadow: 0 0 5px $light-text;
+
+  &:hover {
+    box-shadow: 0 0 10px $light-text;
+    opacity: 1;
+  }
 
   ul {
     display: flex;
@@ -63,9 +75,9 @@ const onToggle = () => (open.value = !open.value)
     }
   }
 }
-.open .nav-menu {
-  width: 100vw;
-  height: 100vh;
+.open .navigation-mobile {
+  width: 100%;
+  height: 100%;
   border-radius: 0;
   bottom: 0;
   left: 0;

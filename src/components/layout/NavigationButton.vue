@@ -9,10 +9,12 @@
 import IconVue from '@/assets/icons/Icon.vue'
 import { scrollToAnchor } from '@/helpers'
 import { PageLinkType } from '@/types'
+import { useAppStore } from '@/stores/app'
 
 const { link } = defineProps<{ link: PageLinkType }>()
+const isMobile = useAppStore().smAndDown
 // TODO: SCSS $nav-height-scroll
-const offset = 70
+const offset = isMobile ? 0 : 70
 </script>
 
 <style lang="scss" scoped>
