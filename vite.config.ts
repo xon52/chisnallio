@@ -15,7 +15,6 @@ const indexReplace = () => ({
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/chisnallio/',
   plugins: [indexReplace()],
   resolve: {
     alias: {
