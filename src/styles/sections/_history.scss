@@ -1,0 +1,8 @@
+@use '@/styles/helpers' as *;
+@use './timeline' as *;
+
+#History {
+  background-color: $blue-bg;
+  flex-direction: column;
+  padding-top: 5em;
+}

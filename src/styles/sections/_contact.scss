@@ -1,0 +1,144 @@
+@use '@/styles/helpers' as *;
+
+$contact-width: 200px;
+$contact-spacing: 20px;
+
+#Contact {
+  background-color: $green-bg;
+  flex-direction: column;
+
+  .contact-buttons {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .contact-button {
+    align-items: center;
+    background-color: lighten($black-bg, 10%);
+    border-color: darken($black-bg, 20%);
+    border-radius: 100%;
+    border-style: outset;
+    border-width: 5px;
+    color: var(--color);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: $contact-width;
+    justify-content: center;
+    margin: $contact-spacing;
+    padding: $contact-spacing;
+    position: relative;
+    transition: 0.3s all ease-in-out;
+    width: $contact-width;
+    overflow: hidden;
+    .logo {
+      font-size: $contact-width;
+      transform: scale(0.8, 0.8);
+      transition: 0.3s all ease-in-out;
+    }
+    .label,
+    .action {
+      color: $light-text;
+      display: block;
+      position: absolute;
+      opacity: 0;
+    }
+    .label {
+      top: 0.5rem;
+    }
+    .action {
+      bottom: 0.5rem;
+    }
+    .copied-text {
+      opacity: 0;
+      background-color: #ffffffcc;
+      position: absolute;
+      padding: 0.5em 1em;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      transition: opacity 0.5s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-weight: bold;
+
+      &.active {
+        opacity: 1;
+      }
+    }
+
+    &:hover {
+      animation: contact-button-animation 0.8s normal 0.3s;
+      background-color: lighten($black-bg, 20%);
+      border-radius: 25%;
+      height: calc($contact-width + $contact-spacing * 2);
+      padding: 0 $contact-spacing;
+      margin: 0 $contact-spacing;
+      .label,
+      .action {
+        opacity: 1;
+      }
+    }
+    &:active {
+      border-style: inset;
+    }
+  }
+}
+
+// Mobile
+@include sm-and-down {
+  #Contact {
+    .contact-buttons {
+      flex-direction: column;
+    }
+
+    .contact-button {
+      border-radius: $contact-width * 0.5;
+      width: $contact-width * 1.5;
+      max-width: 90vw;
+      height: $contact-width * 0.5;
+      margin: $contact-spacing * 0.5;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .logo {
+        font-size: $contact-width * 0.5;
+      }
+      .label {
+        opacity: 1;
+        right: 2rem;
+        top: auto;
+      }
+      .action {
+        display: none;
+      }
+
+      &:hover {
+        height: $contact-width * 0.5;
+        border-radius: $contact-width * 0.5;
+        padding: $contact-spacing;
+        margin: $contact-spacing * 0.5;
+      }
+    }
+  }
+}
+
+@keyframes contact-button-animation {
+  from,
+  to {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(0.9, 1.1);
+  }
+  50% {
+    transform: scale(1.1, 0.9);
+  }
+  75% {
+    transform: scale(0.95, 1.05);
+  }
+}

@@ -1,0 +1,19 @@
+@forward 'contact';
+@forward 'hero';
+@forward 'history';
+@forward 'navMob';
+@forward 'navWeb';
+@forward 'skills';
+
+@use '@/styles/helpers' as *;
+
+section {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: center;
+  background: $black-bg;
+  position: relative;
+}
