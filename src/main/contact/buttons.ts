@@ -3,7 +3,7 @@ import genIcon from '@/icons';
 
 const generateNode = () => {
   const node = document.createElement('div');
-  node.className = 'contact-buttons';
+  node.classList.add('contact-buttons', 'no-select');
 
   items.forEach(({ color, url, copy, label, icon }) => {
     const _node = document.createElement('div');

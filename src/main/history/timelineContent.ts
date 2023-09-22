@@ -2,7 +2,7 @@ import { HistoryType } from '@/types';
 
 export default (item: HistoryType, reverse: boolean) => {
   const node = document.createElement('div');
-  node.classList.add('wrapper');
+  node.classList.add('wrapper', 'no-select');
   node.classList.toggle('reverse', reverse);
   // Date
   node.innerHTML += /*HTML*/ `
