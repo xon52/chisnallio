@@ -6,6 +6,7 @@
 - 💬 Ask me about **management, frontend, and startups**
 - 📫 How to reach me: **https://chisnall.io**
 - ⚡ Fun fact **I believe CSS is a programming language**
+- 🧠 I made this repo **without a framework** just to prove to myself I could 😅
 
 <br>
 <p><img src="https://github-readme-stats.vercel.app/api/top-langs?username=xon52&show_icons=true&locale=en&layout=compact" alt="xon52" /></p>

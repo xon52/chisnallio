@@ -16,4 +16,16 @@ section {
   scroll-snap-align: center;
   background: $black-bg;
   position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background-color: $white-bg;
+    border-radius: 50%;
+    box-shadow: 0 0 50vw 25vh $white-bg;
+    pointer-events: none;
+    opacity: 5%;
+  }
 }

@@ -6,7 +6,7 @@ import generateContent from './timelineContent';
 const generateNode = () => {
   const node = document.createElement('section');
   node.id = 'History';
-  node.innerHTML += `<h1 class="fancy-text highlight">Professional History ⏳</h1> `;
+  node.innerHTML += `<h1 class="fancy-text highlight no-select">Professional History ⏳</h1> `;
   const timeline = document.createElement('div');
   timeline.className = 'timeline';
   items.forEach((item, index) => {

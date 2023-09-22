@@ -5,7 +5,7 @@ const generateNode = () => {
   node.id = 'Contact';
 
   node.innerHTML = /* html */ `
-    <h1 class="fancy-text highlight">Let's connect ☕</h1>
+    <h1 class="fancy-text highlight no-select">Let's connect ☕</h1>
   `;
   node.append(buttons());
 
