@@ -1,5 +1,5 @@
 <template>
-	<h3 class="mb-1 mt-8 text-gray-400">Qualifications</h3>
+	<h3 class="mb-1 mt-6 text-gray-400">Qualifications</h3>
 	<ul class="relative border-gray-200 dark:border-gray-700 list-none p-0 ml-2">
 		<template v-for="{ endDate, institution, grade, title } in qualifications">
 			<li class="mb-2">
