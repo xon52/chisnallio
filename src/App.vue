@@ -12,6 +12,7 @@
 						<MySummary />
 						<MySkills />
 						<MyQualifications />
+						<MyReferences />
 					</aside>
 					<main class="flex-grow w-full sm:w-1/2">
 						<MyExperiences />
@@ -27,6 +28,7 @@ import MyControls from './components/controls/Controls.vue';
 import MyContact from './components/contact/Contact.vue';
 import MyExperiences from './components/Experiences.vue';
 import MyQualifications from './components/Qualifications.vue';
+import MyReferences from './components/References.vue';
 import MySkills from './components/Skills.vue';
 import MySummary from './components/Summary.vue';
 import { useAppStore } from './store';
