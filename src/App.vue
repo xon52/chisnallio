@@ -1,6 +1,6 @@
 <template>
 	<div :class="{ dark: darkMode }" class="min-h-screen">
-		<div class="min-h-full bg-slate-50 max-w-full format dark:format-invert dark:bg-gray-900 p-2 sm:p-6">
+		<div class="min-h-screen bg-slate-50 max-w-full format dark:format-invert dark:bg-gray-900 p-2 sm:p-6">
 			<div
 				class="container max-w-screen-lg mx-auto border bg-slate-50 border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-4 sm:p-6 print:border-0 print:p-0 print:shadow-none print:text-sm">
 				<MyControls />
