@@ -1,5 +1,5 @@
 <template>
-	<h3 class="mb-1 mt-8 sm:mt-0 text-gray-400">Experiences</h3>
+	<h3 class="mb-1 mt-6 sm:mt-0 text-gray-400">Experiences</h3>
 	<ul
 		class="relative border-l border-gray-200 dark:border-gray-700 list-none ml-4 print:ml-0 print:border-l-0 print:p-0">
 		<template v-for="{ company, description, endDate, startDate, title } in experiences">

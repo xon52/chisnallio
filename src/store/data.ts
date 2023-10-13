@@ -23,6 +23,12 @@ export const useDataStore = defineStore('data', () => {
 				return emData.skills;
 		}
 	});
+	const references = computed(() => {
+		switch (mode.value) {
+			case 'em':
+				return emData.references;
+		}
+	});
 	const experiences = computed(() => {
 		switch (mode.value) {
 			case 'em':
@@ -35,10 +41,11 @@ export const useDataStore = defineStore('data', () => {
 	};
 
 	return {
-		title,
-		summary,
-		skills,
 		experiences,
+		skills,
+		summary,
+		title,
+		references,
 		switchMode,
 	};
 });
