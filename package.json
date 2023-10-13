@@ -20,7 +20,7 @@
     "vue": "^3.3.4"
   },
   "devDependencies": {
-    "@types/node": "^20.8.3",
+    "@types/node": "^20.8.5",
     "@vitejs/plugin-vue": "^4.4.0",
     "autoprefixer": "^10.4.16",
     "flowbite-typography": "^1.0.3",
@@ -28,6 +28,6 @@
     "tailwindcss": "^3.3.3",
     "typescript": "^5.2.2",
     "vite": "^4.4.11",
-    "vue-tsc": "^1.8.18"
+    "vue-tsc": "^1.8.19"
   }
 }
