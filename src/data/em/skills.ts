@@ -2,10 +2,13 @@ import { Skill } from '@/types';
 
 const skills: Skill[] = [
 	'Cross functional teams',
+	'Cross platform products',
+	'Product management',
+	'Product development',
+	'Customer research',
 	'Hiring talent',
 	'Sales',
 	'Process improvement',
-	'Product development',
 	'Stakeholder management',
 	'Strategic planning',
 	'Quality control',

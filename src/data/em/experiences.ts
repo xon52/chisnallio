@@ -7,7 +7,7 @@ const experiences: Experience[] = [
 		endDate: 'Now',
 		company: 'SafetyCulture',
 		description:
-			'Managed cross-functional teams of 5-12 engineers between Townsville, Sydney, and remote. Working with designers and product managers to deliver major user, group, and permission management features.',
+			'Managed cross-functional and cross-platform, teams of 6-12 engineers between Townsville, Sydney, and remote. Working with platform, customer facing, and infrastructure engineering teams, product designers and product managers to deliver major user, group, and permission management features. I have also been acting product manager for the space since 2023.',
 	},
 	{
 		title: 'Startup Co-founder',
