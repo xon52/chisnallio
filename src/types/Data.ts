@@ -1,9 +1,9 @@
-import { Experience, Reference, Skill, Summary } from '.';
+import { Details, Experience, Qualification, Reference, Skill } from '.';
 
 export type Data = {
 	experiences: Experience[];
 	references: Reference[];
 	skills: Skill[];
-	summary: Summary;
-	title: string;
+	details: Details;
+	qualifications: Qualification[];
 };

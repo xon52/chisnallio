@@ -1,5 +1,5 @@
 <template>
-	<h3 class="mb-1 mt-6 sm:mt-0 text-gray-400">Experiences</h3>
+	<h3 class="section-title">Experiences</h3>
 	<ul
 		class="relative border-l border-gray-200 dark:border-gray-700 list-none ml-4 print:ml-0 print:border-l-0 print:p-0">
 		<template v-for="{ company, description, endDate, startDate, title } in experiences">
@@ -9,7 +9,11 @@
 				<p class="m-0 font-bold text-gray-800 dark:text-white">{{ title }} ({{ startDate }} - {{ endDate }})</p>
 				<p class="m-0 italic font-medium">{{ company }}</p>
 				<p class="m-0 text-gray-400">
-					{{ description }}
+        <ul class="list-disc">
+          <template v-for="point in description">
+            <li class="my-0">{{ point }}</li>
+          </template>
+        </ul>
 				</p>
 			</li>
 		</template>
@@ -17,8 +21,5 @@
 </template>
 
 <script setup lang="ts">
-import { useDataStore } from '@/store';
-import { storeToRefs } from 'pinia';
-
-const { experiences } = storeToRefs(useDataStore());
+import { experiences } from '@/data';
 </script>
