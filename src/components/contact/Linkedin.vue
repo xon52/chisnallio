@@ -1,7 +1,11 @@
 <template>
-	<a class="flex" :href="linkedin" target="_blank" title="LinkedIn">
+	<a
+		class="flex hover:text-blue-700 dark:hover:text-blue-400 no-underline font-normal"
+		:href="`https://www.linkedin.com/in/${linkedin}`"
+		target="_blank"
+		title="LinkedIn">
 		<svg
-			class="w-5 h-5 hover:text-blue-700 dark:hover:text-blue-400 my-auto mr-1"
+			class="w-4 h-4 my-auto mr-2"
 			aria-hidden="true"
 			xmlns="http://www.w3.org/2000/svg"
 			fill="currentColor"
@@ -12,11 +16,12 @@
 				clip-rule="evenodd" />
 			<path d="M3 5.012H0V15h3V5.012Z" />
 		</svg>
+		{{ linkedin }}
 	</a>
 </template>
 
 <script setup lang="ts">
-import details from '@/data/details';
+import { details } from '@/data';
 
 const { linkedin } = details;
 </script>

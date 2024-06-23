@@ -1,1 +1,0 @@
-export default `I've been a manager for 10 years and an engineer for 16. My experience spans from mining to pharmaceuticals, and from R&D to sales. I find passion and develop an interest in all I do; geeking out on technical excellence, and striving to know more than I did yesterday.`;

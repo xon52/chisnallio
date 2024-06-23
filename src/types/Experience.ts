@@ -3,5 +3,5 @@ export type Experience = {
 	endDate: string;
 	title: string;
 	company: string;
-	description: string;
+	description: string[];
 };

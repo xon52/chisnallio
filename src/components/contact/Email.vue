@@ -38,7 +38,7 @@
 </template>
 
 <script setup lang="ts">
-import details from '@/data/details';
+import { details } from '@/data';
 import ClickToReveal from './ClickToReveal.vue';
 
 const { email } = details;
