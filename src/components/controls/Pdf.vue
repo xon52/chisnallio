@@ -3,9 +3,14 @@
 		type="button"
 		aria-label="Get a PDF copy"
 		title="Get a PDF copy"
-		href="/Keagan Chisnall - Engineering Manager.pdf"
+		href="/Keagan Chisnall Resume.pdf"
 		class="px-4 py-2 text-sm font-medium bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white">
-		<svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 20">
+		<svg
+			class="w-6 h-6"
+			aria-hidden="true"
+			xmlns="http://www.w3.org/2000/svg"
+			fill="none"
+			viewBox="0 0 16 20">
 			<path
 				stroke="currentColor"
 				stroke-linecap="round"

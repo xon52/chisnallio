@@ -2,7 +2,7 @@
 
   # Hi 👋, I'm Keagan
 
-  🔭 I’m currently managing a team working on **administration features for SafetyCulture**
+  🔭 I’m currently managing a multiple engineering teams working on **user management features for SafetyCulture** while doubling as the product manager for the space.
   
   💬 Ask me about **strategy, management, frontend, and startups**
   
