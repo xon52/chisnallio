@@ -8,7 +8,7 @@
 					class="absolute w-3 h-3 bg-gray-200 rounded-full mt-2.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700 print:hidden"></div>
 				<p class="m-0 font-bold text-gray-800 dark:text-white">{{ title }} ({{ startDate }} - {{ endDate }})</p>
 				<p class="m-0 italic font-medium">{{ company }}</p>
-				<p class="m-0 text-gray-400">
+				<p class="m-0 text-gray-500">
         <ul class="list-disc">
           <template v-for="point in description">
             <li class="my-0">{{ point }}</li>
