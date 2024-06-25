@@ -6,7 +6,7 @@
 				<li>
 					<h4 class="-mb-1">{{ title }}</h4>
 					<p class="mb-0">{{ institution }} {{ endDate }}</p>
-					<p class="my-0 leading-none text-gray-400">{{ grade }}</p>
+					<p class="my-0 leading-none text-gray-500">{{ grade }}</p>
 				</li>
 			</template>
 		</ul>

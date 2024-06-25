@@ -4,6 +4,6 @@
 
 @layer components {
 	.section-title {
-		@apply mb-1 mt-6 lg:mt-3 text-gray-600 dark:text-gray-400 print:my-2;
+		@apply mb-1 mt-6 lg:mt-3 text-gray-600 dark:text-gray-500 print:my-2;
 	}
 }
