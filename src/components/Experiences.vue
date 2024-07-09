@@ -2,7 +2,7 @@
 	<h3 class="section-title">Experiences</h3>
 	<ul
 		class="relative border-l border-gray-200 dark:border-gray-700 list-none ml-4 print:ml-0 print:border-l-0 print:p-0">
-		<template v-for="{ company, description, endDate, startDate, title, years } in experiences">
+		<template v-for="{ company, description, title, years } in experiences">
 			<li class="mb-6 ml-0">
 				<div
 					class="absolute w-3 h-3 bg-gray-200 rounded-full mt-2.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700 print:hidden"></div>
