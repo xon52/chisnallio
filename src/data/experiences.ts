@@ -5,6 +5,7 @@ const experiences: Experience[] = [
 		title: 'Software Engineering Manager',
 		startDate: '2021',
 		endDate: 'Now',
+		years: 4,
 		company: 'SafetyCulture',
 		description: [
 			'Managed platform level products supporting 350,000+ MAU',
@@ -17,6 +18,7 @@ const experiences: Experience[] = [
 		title: 'Co-founder',
 		startDate: '2019',
 		endDate: '2020',
+		years: 2,
 		company: 'Medicly',
 		description: [
 			'Built a medical startup without prior startup or medical experience',
@@ -28,6 +30,7 @@ const experiences: Experience[] = [
 		title: 'Management Consultant',
 		startDate: '2015',
 		endDate: '2019',
+		years: 4,
 		company: 'Federal Government & Private',
 		description: [
 			'Supported over 80 businesses in identifying and executing business improvement opportunities',
@@ -39,6 +42,7 @@ const experiences: Experience[] = [
 		title: 'Area Manager',
 		startDate: '2012',
 		endDate: '2014',
+		years: 2,
 		company: 'Nalco Water, An Ecolab Company',
 		description: [
 			'Achieved profitability in an area that was previously underperforming within 6 months',
@@ -50,6 +54,7 @@ const experiences: Experience[] = [
 		title: 'Process Engineer',
 		startDate: '2008',
 		endDate: '2012',
+		years: 5,
 		company: 'Sun Metals & Xstrata Technology',
 		description: [
 			'Supported $10 million plant refurbishment and restart project in the Philippines',
